@@ -1,0 +1,43 @@
+.carousel-item {
+    display: flex;
+    flex-direction: row; /* Default to row layout for larger screens */
+    align-items: center;
+    width: 100%;
+    padding: 0 15px; /* Adjust padding as needed */
+}
+
+.carousel-item img {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-item .text {
+    flex: 1;
+    max-width: 50%;
+    padding: 15px; /* Adjust padding as needed */
+}
+
+[dir="rtl"] .carousel-item {
+    flex-direction: row-reverse; /* Reverse direction for RTL languages */
+}
+h3,p
+{color: var(--main-color);}
+/* Media Query for small screens */
+@media (max-width: 767px) {
+    .carousel-item {
+        flex-direction: column; /* Stack image and text vertically on small screens */
+        text-align: center; /* Center text on small screens */
+    }
+
+    .carousel-item img {
+        max-width: 100%; /* Ensure image fits within the container */
+        margin-bottom: 15px; /* Space between image and text */
+    }
+
+    .carousel-item .text {
+        max-width: 100%; /* Ensure text takes full width */
+        padding: 15px; /* Add padding if needed */
+    }
+}

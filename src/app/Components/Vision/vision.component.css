@@ -1,0 +1,14 @@
+
+  p
+{
+    color:var(--text-color);
+}
+.container
+{
+  width: 85%;
+}
+@media (max-width: 768px) {
+  .container{
+    width: 100%;
+  }
+}

@@ -1,0 +1,100 @@
+
+.footer:hover {
+    color: var(--main-color) !important; /* Hover color */
+  }
+.bg
+{
+  background-color: var(--Footer-bg);
+}
+  .social-media {
+    display: flex;
+    align-items: center;
+  }
+  .scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+ .facebook
+ {
+  color: #3763F7;
+ }
+ .linkedin
+ {
+  color:#3B77B1
+ }
+ .instagram{
+  color: #DF2CDB;
+ }
+  .scroll-to-top-btn:hover .fa-arrow-up {
+    color: var(--text-color);
+   
+  }
+  /* Ensure the button is not accidentally hidden */
+  .scroll-to-top-btn {
+    display: block !important;
+  }
+  
+
+
+/* Base styling for the social media links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links .text-color {
+  
+  font-weight: bold;
+  margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+
+
+/* Ensure text is displayed on larger screens */
+@media (min-width: 769px) {
+  .social-links {
+    flex-direction: column; /* Align items in a column */
+  }
+
+  .social-links .social-text {
+    display: inline; /* Display the text */
+  }
+}
+
+/* Ensure icons are visible */
+.social-links i {
+  font-size: 1rem; /* Adjust icon size */
+  margin-right: 8px; /* Space between icon and text */
+}
+/* Arrange icons in a row and hide text on small screens */
+@media (max-width: 768px) {
+  .social-links {
+    flex-direction: row; /* Align icons in a row */
+    flex-wrap: wrap; /* Allow icons to wrap if necessary */
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center;
+  }
+
+  .social-links .social-text {
+    display: none; /* Hide the text */
+  }
+
+  .social-links > div > div {
+    margin: 0 2px; /* Space between icons */
+  }
+  .social-links i {
+    font-size: 1.3rem; /* Adjust icon size */
+    margin-top: 20px;
+  
+    
+  }
+}

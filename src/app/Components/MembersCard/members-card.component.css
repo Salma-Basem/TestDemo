@@ -1,0 +1,81 @@
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of images */
+    gap: 10px; /* Space between images */
+    justify-content: center; /* Center images horizontally */
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    width: 60%; /* Set the width of the image item to 80% */
+    max-width: 300px; /* Optional: set a max-width to ensure images don't get too large */
+    margin-bottom: 15px; /* Space between rows */
+    display: flex;
+    justify-content: center; /* Center the image within the item */
+}
+
+.image-item img {
+    width: 100%; /* Ensure the image takes the full width of its container */
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: scale(1.1); /* Slightly scale the overlay initially */
+}
+
+.overlay .text {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.image-item:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+    transform: scale(1); /* Scale to normal size on hover */
+}
+.arrow-right {
+    margin-left: 0.5rem; /* Adjust spacing as needed */
+    margin-right: 0.5rem;
+}
+.arrow-left {
+    margin-right: 0.5rem; /* Adjust spacing as needed */
+    margin-left: 0.5rem;
+}
+
+.text-title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -10px; /* Position the line below the text; adjust as needed */
+    transform: translateX(-50%);
+    width: 8%; /* Adjust the width of the line as needed */
+    height: 3px; /* Thickness of the line */
+    background-color: var(--main-color); /* Color of the line; adjust as needed */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .image-gallery {
+        justify-content: center; /* Center images in the row on small screens */
+    }
+
+    .image-item {
+        width: 80%; /* Maintain 80% width on small screens */
+    }
+}

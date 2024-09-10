@@ -1,0 +1,100 @@
+<div class="container-fluid bg-main py-5 border-bottom border-secondary " [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+
+    <div class="container py-3 mt-5 ">
+        <h2 class="text-center position-relative fw-bold mb-3   ">{{ 'GHAYA_HOME_PROJECTS.TITLE' | translate }}</h2>
+
+        <div  class="container mx-auto mt-5">
+        
+            <div class="row g-4 mt-4 g-sm-5">
+                <div class="col-md-4 mb-3">
+                    <div class="card custom-card">
+                        <!-- Video Section -->
+                        <div class="video-wrapper">
+                            <iframe id="videoIframe" 
+                                    src="https://www.youtube.com/embed/K4TOrB7at0Y?autoplay=1" 
+                                    title="YouTube video player" frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        
+                        <!-- Card Content Section -->
+                        <div class="card-body">
+                            <h5 class="card-title">{{ 'NAVBAR.PROJECTS.PUBLISHING_HOUSE' | translate }}</h5>
+                            <p class="card-text">{{ 'GHAYA_HOME_PROJECTS.GHAYA_PROJECTS_LIST.CARD1' | translate }}</p>
+                            <div>
+                                <a routerLink="/Projects/PublishingHouse" class="btn btn-primary w-auto">
+                                    {{ 'KNOW_MORE' | translate }}
+                                    <i class="fa-solid arrow-right"
+                                       [ngClass]="{
+                                           'fa-arrow-right': dir === 'ltr',
+                                           'fa-arrow-left': dir === 'rtl'
+                                       }"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 mb-3">
+                    <div class="card custom-card">
+                        <!-- Video Section -->
+                        <div class="video-wrapper">
+                            <iframe id="videoIframe" 
+                                    src="https://www.youtube.com/embed/K4TOrB7at0Y?autoplay=1" 
+                                    title="YouTube video player" frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        
+                        <!-- Card Content Section -->
+                        <div class="card-body">
+                            <h5 class="card-title">{{ 'NAVBAR.PROJECTS.PRODUCTION' | translate }}</h5>
+                            <p class="card-text">{{ 'GHAYA_HOME_PROJECTS.GHAYA_PROJECTS_LIST.CARD2' | translate }}</p>
+                            <div>
+                                <a routerLink="/Projects/Production" class="btn btn-primary">
+                                    {{ 'KNOW_MORE' | translate }}
+                                    <i class="fa-solid arrow-right"
+                                       [ngClass]="{
+                                           'fa-arrow-right': dir === 'ltr',
+                                           'fa-arrow-left': dir === 'rtl'
+                                       }"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 mb-3">
+                    <div class="card custom-card">
+                        <!-- Image Section -->
+                        <div class="image-wrapper">
+                            <img src="./assets/Images/Awards.JPG" class="image-card"/>
+                        </div>
+                        
+                        <!-- Card Content Section -->
+                        <div class="card-body">
+                            <h5 class="card-title">{{ 'GHAYA_HOME_PROJECTS.CARD3_NAME' | translate }}</h5>
+                            <p class="card-text">{{ 'GHAYA_HOME_PROJECTS.GHAYA_PROJECTS_LIST.CARD3' | translate }}</p>
+                            <div>
+                                <a routerLink="/Projects/Academy" class="btn btn-primary">
+                                    {{ 'KNOW_MORE' | translate }}
+                                    <i class="fa-solid arrow-right"
+                                       [ngClass]="{
+                                           'fa-arrow-right': dir === 'ltr',
+                                           'fa-arrow-left': dir === 'rtl'
+                                       }"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                
+                
+               
+              
+            
+    </div>
+    </div>
+</div>

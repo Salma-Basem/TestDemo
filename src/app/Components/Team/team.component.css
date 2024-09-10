@@ -1,0 +1,11 @@
+/* Ensure images are responsive and maintain their size */
+.circle-image-container img {
+    transition: transform 0.3s ease; /* Smooth transition effect */
+  }
+  
+  /* Scaling effect on hover */
+  .circle-image-container img.hover-scale:hover {
+    transform: scale(1.1); /* Scale up the image slightly */
+  }
+  
+  

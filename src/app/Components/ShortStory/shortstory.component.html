@@ -1,0 +1,97 @@
+<section class="header-section " id="first-section">
+    <div class="background-container d-flex align-items-center justify-content-center pb-3"[attr.dir]="language === 'ar' ? 'rtl' : 'ltr'" id="background">
+      <div class="overlay d-flex flex-column align-items-center justify-content-center {{ language === 'en' ? 'english' : 'arabic' }}">
+      
+       
+        <h2 class="text-center text-main fw-bold mb-3">{{ 'GHAYA_AWARDS.AWARD1.NAME' | translate }}</h2>
+
+        
+      </div>
+  </div>
+  </section> 
+
+  <!--short story-->
+  <div class="container-fluid bg-main py-5 " [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+
+    <div class="container mx-auto">
+        <div class="video-wrapper">
+          <iframe id="videoIframe" 
+                  src="https://www.youtube.com/embed/K4TOrB7at0Y?autoplay=1" 
+                  title="YouTube video player" frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+  <div class="container py-3 mt-5">
+    
+    <div id="ShortStory" class="container mx-auto ">
+        <!-- Award 1 Section --> 
+
+        <div class="row d-flex align-items-center flex-column flex-md-row">
+            <!-- Image Column -->
+            <div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center mb-3 mb-md-0">
+                <img src="./assets/Images/yehia.jpg" alt="" class="w-100">
+                <span class="mt-2">{{ 'GHAYA_AWARDS.AWARD1.PHOTO_NAME' | translate }}</span>
+            </div>
+            <!-- Content Column -->
+            <div class="col-12 col-md-8">
+                <h3 class="text-center text-main fw-bold mb-3 h2">{{ 'GHAYA_AWARDS.AWARD1.EDITION' | translate }}</h3>
+
+                <div class="mb-5">
+                    <!-- More Content -->
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT1' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT2' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT3' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT4' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT5' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT6' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT7' | translate | newlineToBr"></p>
+                    <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT8' | translate | newlineToBr"></p>
+                </div>
+                   
+
+               
+            </div>
+            <p class="fw-bolder h4" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT9' | translate | newlineToBr"></p>
+
+            <ul class="custom-list">
+                <li class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT10' | translate | newlineToBr"></li>
+                <li class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT11' | translate | newlineToBr"></li>
+                <li class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT12' | translate | newlineToBr"></li>
+                <li class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT13' | translate | newlineToBr"></li>
+                <li class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT14' | translate | newlineToBr"></li>
+                <li class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT15' | translate | newlineToBr"></li>
+                <li class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT16' | translate | newlineToBr"></li>
+                <li class="lead " [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT17' | translate | newlineToBr"></li>
+                
+                <div class="row justify-content-top align-items-center">
+
+                
+                <a (click)="goToGmail()" class="cursor-pointer h5 text-center">
+                    awards&#64;ghayaeg.com
+                </a>  </div>
+                </ul>
+                <p class="fw-bolder h4" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT18' | translate | newlineToBr"></p>
+                <ul class="custom-list">
+                    <li class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT19' | translate | newlineToBr"></li>
+                    <li class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT20' | translate | newlineToBr"></li>
+                    </ul>
+                    <p class="fw-bolder h4" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT21' | translate | newlineToBr"></p>
+
+                    <ul class="custom-list">
+                    <li class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT22' | translate | newlineToBr"></li>
+                    <li class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT23' | translate | newlineToBr"></li>
+                    <li class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT24' | translate | newlineToBr"></li>
+                    <li class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT25' | translate | newlineToBr"></li>
+                    </ul>
+            <div class="row justify-content-center align-items-center">
+
+                <a (click)="goToGmail()" class="text-center cursor-pointer h4">
+                  <i class="fa-solid fa-envelope text-main fa-bounce ms-2 me-2"></i>
+                  awards&#64;ghayaeg.com
+              </a>          
+            </div>
+        </div>
+    </div>
+</div>
+  </div>

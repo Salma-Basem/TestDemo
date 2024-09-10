@@ -1,0 +1,15 @@
+<!-- about-us.component.html -->
+<div class="container-fluid bg-main py-1 "[attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container mx-auto mt-5">
+    <!-- Our Vision  -->
+    <h2  class="text-center  fw-bold mb-3">{{ 'GHAYA_VISION.VISION' | translate }}</h2>
+    <div class="mb-5 ">
+      <div class=" mb-5 justify-content-center">
+        <div >
+          <p class="lead" [innerHTML]="'GHAYA_VISION.CREATIVITY' | translate | newlineToBr"></p>
+          <p class="lead" [innerHTML]="'GHAYA_VISION.CREATOR_AUDIENCE' | translate | newlineToBr"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

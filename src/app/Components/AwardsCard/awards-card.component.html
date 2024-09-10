@@ -1,0 +1,107 @@
+<div class="container-fluid bg-main py-5 border-bottom border-secondary " [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+
+    <div class="container py-3 mt-5 ">
+        <div  class="container mx-auto ">
+            <h2 class="text-center position-relative fw-bold mb-3 ">{{ 'GHAYA_HOME_AWARDS.TITLE' | translate }}</h2>
+           
+            <div class="row g-4 mt-4 g-sm-5">
+                <div class="col-md-4 mb-3">
+                    <div class="card custom-card">
+                        <!-- Video Embed Section -->
+                        <div class="video-wrapper">
+                            <iframe 
+                                src="https://www.youtube.com/embed/K4TOrB7at0Y?autoplay=1" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        
+                        <!-- Card Content Section -->
+                        <div class="card-body">
+                            <h5 class="card-title ">{{ 'NAVBAR.AWARDS.SHORT_STORY' | translate }}</h5>
+                            <p class="card-text">{{ 'GHAYA_HOME_AWARDS.GHAYA_AWARDS_LIST.CARD1' | translate }}</p>
+                            <div>
+                                <a routerLink="/Awards/ShortStory" class="btn btn-primary">
+                                    {{ 'GHAYA_HOME_AWARDS.KNOW_MORE_ABOUT_PRIZE' | translate }}
+                                    <i class="fa-solid fa-coins text-main"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Decorative Image Section -->
+                        <div class="circle-container">
+                            <img src="./assets/Images/file.gif" alt="Decorative Image" class="circle-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                    <div class="card custom-card">
+                        <!-- Video Embed Section -->
+                        <div class="video-wrapper">
+                            <iframe 
+                                src="https://www.youtube.com/embed/K4TOrB7at0Y?autoplay=1" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        
+                        <!-- Card Content Section -->
+                        <div class="card-body">
+                            <h5 class="card-title ">{{ 'NAVBAR.AWARDS.PHOTOGRAPHY' | translate }}</h5>
+                            <p class="card-text">{{ 'GHAYA_HOME_AWARDS.GHAYA_AWARDS_LIST.CARD2' | translate }}</p>
+                            <div>
+                            <a routerLink="/Awards/Photography" class="btn btn-primary">
+                                {{ 'GHAYA_HOME_AWARDS.KNOW_MORE_ABOUT_PRIZE' | translate }}
+                                <i class="fa-solid fa-coins text-main"></i>
+                            </a></div>
+                        </div>
+                        
+                        <!-- Decorative Image Section -->
+                        <div class="circle-container">
+                            <img src="./assets/Images/camera.gif" alt="Decorative Image" class="circle-image">
+                        </div>
+                    </div>
+                </div>
+           
+                <div class="col-md-4 mb-3">
+                    <div class="card custom-card">
+                        <!-- Video Embed Section -->
+                        <div class="video-wrapper">
+                            <iframe 
+                                src="https://www.youtube.com/embed/K4TOrB7at0Y?autoplay=1" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        
+                        <!-- Card Content Section -->
+                        <div class="card-body">
+                            <h5 class="card-title ">{{ 'NAVBAR.AWARDS.CONTENT_CREATION' | translate }}</h5>
+                            <p class="card-text">{{ 'GHAYA_HOME_AWARDS.GHAYA_AWARDS_LIST.CARD3' | translate }}</p>
+                            <div>
+                            <a routerLink="/Awards/ContentCreation" class="btn btn-primary">
+                                {{ 'GHAYA_HOME_AWARDS.KNOW_MORE_ABOUT_PRIZE' | translate }}
+                                <i class="fa-solid fa-coins text-main"></i>
+                            </a></div>
+                        </div>
+                        
+                        <!-- Decorative Image Section -->
+                        <div class="circle-container">
+                            <img src="./assets/Images/Blog.gif" alt="Decorative Image" class="circle-image">
+                        </div>
+                    </div>
+                </div>
+           
+                
+            </div>
+          </div>
+    </div>
+</div>
+

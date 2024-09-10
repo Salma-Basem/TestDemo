@@ -1,0 +1,159 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+/* Default theme variables */
+:root {
+  --shadow: rgb(94, 167, 26) 0px 25px 50px -12px;
+  --font-family: 'Tajawal', sans-serif;
+  --background-color: #000000; /* Default background color */
+  --text-color: #ffffff; /* Default text color */
+  --main-color: #BA9945;
+  --hover-color: #E62E2D;
+  --btn-outline-color-light: #000000; /* Color for light mode outline buttons */
+  --btn-outline-color-dark: #ffffff; /* Color for dark mode outline buttons */
+  --btn-outline-bg-light: #ffffff; /* Background color for light mode outline buttons */
+  --btn-outline-bg-dark: #000000; /* Background color for dark mode outline buttons */
+  --btn-outline-hover-color-light: #333333; /* Hover color for light mode buttons */
+  --btn-outline-hover-color-dark: #cccccc; /* Hover color for dark mode buttons */
+  
+  --background-color-dark: #000000; /* Default dark mode background color */
+  --text-color-dark: #ffffff; /* Default dark mode text color */
+  --button-border-dark: #ffffff; /* Default dark mode button border color */
+  --button-bg-dark: #000000; /* Default dark mode button background color */
+  --button-hover-dark: #444444; /* Default dark mode button hover color */
+
+  --background-color-light:   #F7F7F7; /* Transparent light mode navbar background */
+  ; /* Light mode background color */
+  --text-color-light: #000000; /* Light mode text color */
+  --button-border-light: #000000; /* Light mode button border color */
+  --button-bg-light: #ffffff; /* Light mode button background color */
+  --button-hover-light: #dddddd; /* Light mode button hover color */
+
+  --navbar-bg-dark: rgba(0, 0, 0, 0.8); /* Transparent dark mode navbar background */
+  --navbar-bg-light: #ffffff; /* Transparent light mode navbar background */
+  
+  --icon-color-light: #000000; /* White icon color for light mode */
+  --icon-color-dark: #ffffff;  /* White icon color for dark mode */
+
+  --shadow-light: 0 8px 16px rgba(0, 0, 0, 0.2); /* Light theme shadow */
+  --shadow-dark: 0 8px 16px rgba(0, 0, 0, 0.4);  /* Dark theme shadow */
+}
+
+
+/* Light mode variables */
+[data-theme='light'] {
+  --background-color: var(--background-color-light);
+  --text-color: var(--text-color-light);
+  --button-border: var(--button-border-light);
+  --button-bg: var(--button-bg-light);
+  --button-hover: var(--button-hover-light);
+  --main-color: #BA9945;
+  --hover-color: #E62E2D;
+  --btn-outline-color: var(--btn-outline-color-light);
+  --btn-outline-bg: var(--btn-outline-bg-light);
+  --btn-outline-hover-color: var(--btn-outline-hover-color-light);
+  --navbar-bg: var(--navbar-bg-light);
+  --navbar-bg-transparent: rgba(255, 255, 255, 0.8); /* Transparent background for light mode */
+  --navbar-bg: rgba(255, 255, 255, 1); /* Solid background for light mode */
+  --text-color-transparent: #ffffff; /* White text on transparent background for light mode */
+  --text-color: #000000; /* Text color for solid background in light mode */
+ 
+  --dropdown-bg: #f8f9fa; /* Light mode dropdown background */
+  --icon-color: var(--icon-color-light);
+  --shadow: var(--shadow-light);
+  --Footer-bg:#DCDCDC
+}
+
+/* Dark mode variables */
+[data-theme='dark'] {
+  --background-color: var(--background-color-dark);
+  --text-color: var(--text-color-dark);
+  --button-border: var(--button-border-dark);
+  --button-bg: var(--button-bg-dark);
+  --button-hover: var(--button-hover-dark);
+  --main-color: #BA9945;
+  --hover-color: #E62E2D;
+  --navbar-bg: var(--navbar-bg-dark);
+  --navbar-bg-transparent: rgba(0, 0, 0, 0.8); /* Transparent background for dark mode */
+  --navbar-bg: rgba(0, 0, 0, 1); /* Solid background for dark mode */
+  --text-color-transparent: #ffffff; /* White text on transparent background for dark mode */
+  --text-color: #ffffff; /* Text color for solid background in dark mode */
+  --dropdown-bg: #343a40; /* Dark mode dropdown background */
+  --icon-color: var(--icon-color-dark);
+  --shadow:var(--shadow-dark);
+}
+
+/* Apply global styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Tajawal', sans-serif;
+  text-align: left;
+  font-size: 1rem; /* Ensure consistent font size */
+  line-height: 1.2; /* Adjust line height if needed */
+  
+}
+
+.btn-outline-custom {
+  border-color: var(--button-border);
+  color: var(--button-border);
+  background-color: var(--button-bg);
+}
+
+.btn-outline-custom:hover {
+  color: var(--button-hover);
+  border-color: var(--button-hover);
+}
+/* Other global styles */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+a {
+  color: var(--text-color) !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.font-sm {
+  font-size: 14px;
+}
+
+.text-main {
+  color: var(--text-color) !important;
+}
+
+.bg-main {
+  background-color: var(--background-color) !important;
+}
+
+/* RTL styles */
+[dir="rtl"] body {
+  text-align: right;
+}
+
+
+.social-media {
+  margin-left: auto;
+}
+
+.rtl .navbar-nav {
+  margin-right: auto;
+}
+
+.rtl .navbar-nav .nav-item {
+  margin-right: 1rem;
+}
+
+.rtl .social-media {
+  margin-right: auto;
+}
+
+.rtl .navbar-toggler {
+  margin-left: auto;
+}
+
+html, body { height: 100%; 
+  scroll-behavior: smooth;
+ }
+/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

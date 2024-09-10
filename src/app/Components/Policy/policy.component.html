@@ -1,0 +1,36 @@
+<section class="header-section " id="first-section">
+      <div class="background-container d-flex align-items-center justify-content-center pb-3"[attr.dir]="language === 'ar' ? 'rtl' : 'ltr'" id="background">
+        <div class="overlay d-flex flex-column align-items-center justify-content-center {{ language === 'en' ? 'english' : 'arabic' }}">
+        
+         
+          <h2 class="text-center text-main fw-bold mb-3">{{ 'NAVBAR.POLICY_AND_OUR_GOALS' | translate }}</h2>
+
+          
+        </div>
+    </div>
+    </section> 
+<div class="container-fluid bg-main py-5 " [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+
+  
+      <div  class="container mx-auto border-bottom border-secondary  mt-5">
+          <!-- policy Section -->
+          <h3 class="text-center text-main fw-bold mb-3 h2">{{ 'GHAYA_POLICY.POLICY' | translate }}</h3>
+          <!-- more content -->
+          <p class=" text-main lead  mb-3">{{ 'GHAYA_POLICY.MAIN_POINTS.MAIN' | translate }}</p>      
+          <ul class="custom-list mb-0" >
+    
+          <li class=" text-main lead  mb-3">{{ 'GHAYA_POLICY.MAIN_POINTS.POINT1' | translate }}</li>
+          <li class=" text-main lead  mb-3">{{ 'GHAYA_POLICY.MAIN_POINTS.POINT2' | translate }}</li>
+          <li class=" text-main lead  mb-3">{{ 'GHAYA_POLICY.MAIN_POINTS.POINT3' | translate }}</li>
+          <li class=" text-main lead  mb-3">{{ 'GHAYA_POLICY.MAIN_POINTS.POINT4' | translate }}</li>
+          <li class=" text-main lead  mb-3">{{ 'GHAYA_POLICY.MAIN_POINTS.POINT5' | translate }}</li>
+          <li class=" text-main lead  mb-3">{{ 'GHAYA_POLICY.MAIN_POINTS.POINT6' | translate }}</li>
+
+          
+           </ul>
+        </div>
+
+  <app-goals></app-goals>
+</div>
+
+

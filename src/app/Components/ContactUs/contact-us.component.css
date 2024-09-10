@@ -1,0 +1,52 @@
+
+/* General RTL handling */
+[dir='rtl'] {
+    direction: rtl;
+    text-align: right; /* Align text to the right for RTL */
+  }
+  
+  /* General LTR handling */
+  [dir='ltr'] {
+    direction: ltr;
+    text-align: left; /* Align text to the left for LTR */
+  }
+  
+  /* General container styling */
+.info-item {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 1rem; /* Add spacing between items */
+  }
+  
+  /* RTL specific styling */
+  .rtl {
+    flex-direction: row-reverse; /* Swap icon and text positions */
+    text-align: right; /* Align text to the right */
+  }
+  
+  /* LTR specific styling */
+  .ltr {
+    flex-direction: row; /* Default icon and text positions */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Optional: adjust margins based on direction */
+  .rtl i {
+    margin-left: 0.5rem; /* Adjust margin for RTL */
+    margin-right: 1rem; /* Adjust margin for RTL */
+  }
+  
+  .ltr i {
+    margin-right: 0.5rem; /* Adjust margin for LTR */
+    margin-left: 1rem; /* Adjust margin for LTR */
+  }
+  .container
+  {
+    width: 85%;
+  }
+    /* Responsive design adjustments */
+    @media (max-width: 768px) {
+      .container{
+        width: 100%;
+      }
+    }

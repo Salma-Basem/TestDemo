@@ -1,0 +1,65 @@
+
+
+p,li
+{
+    color:var(--text-color);
+}
+/* List styling */
+.custom-list {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0; /* Remove default padding */
+    overflow: hidden; /* Hide any overflowed content */
+   
+  }
+  
+  .custom-list.show {
+    height: fit-content; /* Show the list when toggled */
+  }
+  
+  .custom-list li {
+    position: relative;
+    padding-left: 1.5rem; /* Adjust based on the bullet size */
+    margin-bottom: 0.5rem; /* Reduce bottom margin for better spacing */
+    opacity: 1; /* Ensure items are visible when shown */
+   
+  }
+  .container{
+    width: 85%;
+  }
+  /* RTL adjustments for the dash */
+[dir="rtl"] .custom-list li {
+    padding-left: 0; /* Remove extra padding in RTL */
+    padding-right: 1.5rem; /* Add padding for dash in RTL */
+  }
+  
+  [dir="rtl"] .custom-list li::before {
+    left: auto; /* Override left positioning in RTL */
+    right: 0; /* Position dash on the right for RTL */
+  }
+  
+  [dir="rtl"] .custom-list {
+    direction: rtl; /* Ensure RTL support */
+  }
+/* Dash styling for LTR and RTL */
+.custom-list li::before {
+    content: '-'; /* Dash before each item */
+    position: absolute;
+    color: #f8f9fa; /* Dash color */
+    font-size: 1rem; /* Dash size */
+    left: 0; /* Position on the left for LTR */
+  }
+
+  [dir="rtl"] .custom-list li::before {
+    left: auto; /* Override left positioning in RTL */
+    right: 0; /* Position dash on the right for RTL */
+  }
+  
+  [dir="rtl"] .custom-list {
+    direction: rtl; /* Ensure RTL support */
+  }
+  @media (max-width: 768px) {
+   
+    .container{
+      width: 100%;
+    }
+  }

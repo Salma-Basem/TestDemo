@@ -1,0 +1,28 @@
+<!--Home Component-->
+<section class="header-section" id="first-section">
+  <div class="background-container d-flex align-items-center justify-content-center pb-3" [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'" id="background">
+    <div class="overlay d-flex flex-column align-items-end justify-content-end {{ language === 'en' ? 'english' : 'arabic' }}">
+   <app-slider></app-slider>
+    </div>
+  </div>
+</section>
+
+<main>
+   
+<app-projects></app-projects>
+<app-awards-card></app-awards-card>
+
+<div class="container mt-5 mx-auto">
+  <div class="video-wrapper">
+    <iframe id="videoIframe" 
+            src="https://www.youtube.com/embed/K4TOrB7at0Y?autoplay=1" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+  </div>
+</div>
+<app-members-card></app-members-card>
+
+</main>
+
+

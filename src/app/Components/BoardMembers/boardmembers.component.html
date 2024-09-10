@@ -1,0 +1,44 @@
+<div id="loader" class="loader-overlay">
+  <div class="loader"></div>
+</div>
+<div class="container-fluid bg-main py-5" [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container py-3 mt-5">
+    <h2 class="text-center text-main fw-bold mb-5 title">
+      {{ 'GHAYA_BOARD_DIRECTORS.BOARD_DIRECTORS' | translate }}
+    </h2>
+
+    <div class="container mx-auto mt-2">
+      <div class="row">
+        <!-- Column 1 -->
+        <div class="col-md-6 col-12 d-flex align-content-center justify-content-center mb-4" *ngFor="let member of members; let i = index">
+          <div class="d-flex flex-column align-items-center">
+            <div class="circle-image-container mb-3">
+              <img [src]="member.imageSrc" [alt]="member.name" class="circle-image">
+            </div>
+            <div class="text-center">
+              <h2 class="mt-2">{{ member.name | translate }}</h2>
+              <h3 class="mt-2 text-secondary lead fw-bold">
+                {{ member.point1 | translate }}
+              </h3>
+              <button class="btn bg-transparent text-main toggle-button"
+                      (click)="toggleMemberVisibility(i)"
+                      [ngClass]="{'expanded': member.showMore}">
+                {{ member.showMore ? ('READ_LESS' | translate) : ('READ_MORE' | translate) }}
+                <i [ngClass]="member.showMore ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'"></i>
+              </button>
+              <ul class="custom-list" [ngClass]="{'show': member.showMore}">
+                <li class="text-main mb-2 animate-fade-in" [innerHTML]="member.point2 | translate | newlineToBr"></li>
+                <li class="text-main mb-2 animate-fade-in" [innerHTML]="member.point3 | translate | newlineToBr"></li>
+                <li class="text-main mb-2 animate-fade-in" [innerHTML]="member.point4 | translate | newlineToBr"></li>
+                <li class="text-main mb-2 animate-fade-in" [innerHTML]="member.point5 | translate | newlineToBr"></li>
+                <li class="text-main mb-2 animate-fade-in" *ngIf="member.point6" [innerHTML]="member.point6 | translate | newlineToBr"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

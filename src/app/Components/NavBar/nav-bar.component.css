@@ -1,0 +1,125 @@
+/* Main Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; /* Default transparent background */
+  color: var(--text-color-transparent); /* Text color for transparent background */
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+/* Navbar when scrolled */
+.navbar.scrolled {
+  background: var(--navbar-bg); /* Background when scrolled */
+  color: var(--text-color); /* Text color when scrolled */
+}
+
+.navbar.scrolled .offcanvas-body ul li a,  
+.navbar.scrolled .offcanvas-body button.translation {
+  color: var(--text-color) !important;
+}
+
+/* Navbar Link Styles */
+.navbar .nav-link {
+  color: var(--navbar-link-color); /* Color from navbar */
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  background-color: var(--dropdown-bg);
+ 
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.dropdown-menu li a {
+  background-color: var(--dropdown-bg);
+  color: var(--text-color) !important;
+}
+
+.dropdown-menu li a:hover {
+  color: var(--main-color) !important;
+}
+
+/* Background color when scrolled */
+.navbar.scrolled {
+  background: var(--navbar-bg); /* Change this to the desired color */
+}
+
+/* Icon Styles */
+.theme-icon {
+  color: var(--icon-color); /* Icon color based on theme */
+}
+
+/* Ensure icon color remains consistent */
+.navbar .theme-icon {
+  color: var(--icon-color); /* Apply icon color */
+}
+
+
+/* Offcanvas styles */
+.sidebar {
+  width: 60%;
+}
+
+
+/* Base style for the close button */
+.offcanvas-header .btn-close {
+  margin: 0; /* Remove default margin to prevent unwanted spacing */
+}
+
+/* Align close button to the left for RTL */
+[dir="rtl"] .offcanvas-start .offcanvas-header .btn-close {
+  margin-left: auto; /* Push button to the left in RTL */
+}
+
+/* Align close button to the right for LTR */
+[dir="ltr"] .offcanvas-end .offcanvas-header .btn-close {
+  margin-right: auto; /* Push button to the right in LTR */
+}
+
+
+/* Adjust padding and margin for list items if needed */
+.dropdown-menu li {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .dropdown-menu {
+    max-width: 100%;
+  }
+  /* Allow wrapping on smaller screens */
+  .dropdown-item {
+    white-space: normal; /* Allow text to wrap */
+    overflow: visible; /* Allow overflow to be visible */
+    text-overflow: clip; /* Remove ellipsis */
+  }
+
+  .dropdown-menu {
+    width: 100%; /* Ensure dropdown menu takes full width on small screens */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2px);
+  }
+}
+

@@ -1,0 +1,35 @@
+<section class="header-section " id="first-section">
+    <div class="background-container d-flex align-items-center justify-content-center pb-3"[attr.dir]="language === 'ar' ? 'rtl' : 'ltr'" id="background">
+      <div class="overlay d-flex flex-column align-items-center justify-content-center {{ language === 'en' ? 'english' : 'arabic' }}">
+      
+       
+        <h2 class="text-center text-main fw-bold mb-3">{{ 'GHAYA_ACADEMY.NAME' | translate }}</h2>
+        
+      </div>
+  </div>
+  </section> 
+  <div class="container-fluid bg-main py-5 " [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+    <div class="container py-3 mt-5 ">
+        <div id="Academy" class="container mx-auto  ">
+            <!-- AWARDS BRIEF Section -->
+            <!-- more content -->
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_ACADEMY.DETAILS.POINT1' | translate }}</p>
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_ACADEMY.DETAILS.POINT2' | translate }}</p>
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_ACADEMY.DETAILS.POINT3' | translate }}</p>
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_ACADEMY.DETAILS.POINT4' | translate }}</p>
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_ACADEMY.DETAILS.POINT5' | translate }}</p>
+            <ul class="custom-list">
+              <li class=" text-main lead  mb-3">{{ 'GHAYA_ACADEMY.DETAILS.POINT6' | translate }}</li>
+              <li class=" text-main lead  mb-3">{{ 'GHAYA_ACADEMY.DETAILS.POINT7' | translate }}</li>
+              <li class=" text-main lead  mb-3">{{ 'GHAYA_ACADEMY.DETAILS.POINT8' | translate }}</li>
+              <li class=" text-main lead  mb-3">{{ 'GHAYA_ACADEMY.DETAILS.POINT9' | translate }}</li>
+  
+            </ul>
+         
+            <div class="row justify-content-center align-items-center">
+
+              <a (click)="goToGmail()" class=" text-center cursor-pointer h4"><i class="fa-solid fa-envelope text-main fa-bounce  ms-2 me-2"></i>academy&#64;ghayaeg.com</a>
+             </div>
+          </div>
+    </div>
+</div>

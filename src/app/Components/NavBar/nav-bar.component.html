@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg fixed-top" [ngClass]="{'scrolled': isScrolled}">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand ms-2" routerLink="/">
+      <img src="./assets/Images/GhayaLogoNav.png" alt="Logo">
+    </a>
+    
+    <!-- Toggler Button for Mobile View -->
+    <button class="navbar-toggler shadow-none border-0 text-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      ☰
+    </button>
+  
+    
+    <!-- Offcanvas Menu -->
+    <div class="sidebar offcanvas w-60" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" [ngClass]="{'offcanvas-end': language === 'en', 'offcanvas-start': language === 'ar'}">
+      <div class="offcanvas-header">
+        <!-- Close Button -->
+        <button type="button" class="btn-close btn-close-white text-light  " data-bs-dismiss="offcanvas" aria-label="Close"  [ngClass]="{'ms-auto': language === 'en', 'me-auto': language === 'ar'}"></button>
+      </div>
+      
+
+      <!-- Offcanvas Body -->
+      <div class="offcanvas-body">
+        <ul class="navbar-nav flex-column flex-lg-row p-0" [ngClass]="{'me-auto': language === 'en', 'ms-auto': language === 'ar', 'text-end': language === 'ar', 'text-start': language === 'en'}">
+          <!-- Home Item -->
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" routerLink="Home" routerLinkActive="bg rounded-3">{{ 'NAVBAR.HOME' | translate }}</a>
+          </li>
+          
+          <!-- Projects Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" role="button" routerLinkActive="bg rounded-3" data-bs-toggle="dropdown" aria-expanded="false">{{ 'NAVBAR.PROJECTS.PROJECTS' | translate }}</a>
+            <ul class="dropdown-menu" [ngClass]="{'text-end': language === 'ar', 'text-start': language === 'en'}">
+              <li><a class="dropdown-item text-light" routerLink="Projects/PublishingHouse">{{ 'NAVBAR.PROJECTS.PUBLISHING_HOUSE' | translate }}</a></li>
+              <li><a class="dropdown-item text-light" routerLink="Projects/Production">{{ 'NAVBAR.PROJECTS.PRODUCTION' | translate }}</a></li>
+              <li><a class="dropdown-item text-light" routerLink="Projects/Academy">{{ 'NAVBAR.PROJECTS.ACADEMY' | translate }}</a></li>
+            </ul>
+          </li>
+
+          <!-- Awards Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" role="button" routerLinkActive="bg rounded-3" data-bs-toggle="dropdown" aria-expanded="false">{{ 'NAVBAR.AWARDS.AWARDS' | translate }}</a>
+            <ul class="dropdown-menu" [ngClass]="{'text-end': language === 'ar', 'text-start': language === 'en'}">
+              <li><a class="dropdown-item text-light" routerLink="Awards/ShortStory">{{ 'NAVBAR.AWARDS.SHORT_STORY' | translate }}</a></li>
+              <li><a class="dropdown-item text-light" routerLink="Awards/Photography">{{ 'NAVBAR.AWARDS.PHOTOGRAPHY' | translate }}</a></li>
+              <li><a class="dropdown-item text-light" routerLink="Awards/ContentCreation">{{ 'NAVBAR.AWARDS.CONTENT_CREATION' | translate }}</a></li>
+            </ul>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" role="button" routerLinkActive="bg rounded-3" data-bs-toggle="dropdown" aria-expanded="false">{{ 'NAVBAR.ABOUT_US' | translate }}</a>
+            <ul class="dropdown-menu" [ngClass]="{'text-end': language === 'ar', 'text-start': language === 'en'}">
+              <li><a class="dropdown-item text-light" routerLink="AboutUs/AboutGhaya">{{ 'NAVBAR.ABOUT_US_ITEMS.WHO_WE_ARE' | translate }}</a></li>
+              <li><a class="dropdown-item text-light" routerLink="AboutUs/PolicyAndGoals">{{ 'NAVBAR.POLICY_AND_OUR_GOALS' | translate }}</a></li>
+              <li><a class="dropdown-item text-light" routerLink="AboutUs/BoardMembers">{{ 'NAVBAR.ABOUT_US_ITEMS.BOARD_MEMBERS' | translate }}</a></li>
+              <li><a class="dropdown-item text-light" routerLink="AboutUs/Team">{{ 'NAVBAR.ABOUT_US_ITEMS.TEAM' | translate }}</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" routerLink="EventsProjects">{{ 'PROTOCOLS.NAME' | translate }}</a>
+
+          </li>
+        </ul>
+
+        <!-- Social Media and Language Switch -->
+        <div class="d-flex align-items-center justify-content-start mt-2 mt-lg-0">
+          <app-theme-switcher [ngClass]="{'ms-auto': language === 'en', 'me-auto': language === 'ar', 'me-2': language === 'en', 'ms-2': language === 'ar'}"></app-theme-switcher>
+          <div>
+            <button class="btn bg-transparent text-light translation" *ngIf="language === 'en'" (click)="switchLanguage('ar')">عربي</button>
+            <button class="btn bg-transparent text-light translation" *ngIf="language === 'ar'" (click)="switchLanguage('en')">{{ 'NAVBAR.English' | translate }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

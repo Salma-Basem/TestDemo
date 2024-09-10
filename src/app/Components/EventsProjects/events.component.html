@@ -1,0 +1,26 @@
+<section class="header-section " id="first-section">
+    <div class="background-container d-flex align-items-center justify-content-center pb-3"[attr.dir]="language === 'ar' ? 'rtl' : 'ltr'" id="background">
+      <div class="overlay d-flex flex-column align-items-center justify-content-center {{ language === 'en' ? 'english' : 'arabic' }}">
+      
+       
+        <h2 class="text-center text-main fw-bold mb-3 ">{{ 'PROTOCOLS.NAME' | translate }}</h2>
+  
+        
+      </div>
+  </div>
+  </section> 
+  <div class="container-fluid bg-main py-5 " [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+    <div class="container py-3 mt-5 ">
+      <app-slider></app-slider>
+
+        
+            
+            <!-- more content -->
+            <p class=" text-main lead  mb-3">{{ 'PROTOCOLS.DETAILS.POINT1' | translate }}</p>
+          
+          
+          
+            
+         
+    </div>
+</div>

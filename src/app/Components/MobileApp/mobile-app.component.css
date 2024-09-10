@@ -1,0 +1,211 @@
+
+/* General RTL handling */
+[dir='rtl'] {
+    direction: rtl;
+    text-align: right; /* Align text to the right for RTL */
+  }
+  
+  /* General LTR handling */
+  [dir='ltr'] {
+    direction: ltr;
+    text-align: left; /* Align text to the left for LTR */
+  }
+  .container{
+    width: 85%;
+  }
+
+  p,li
+  {
+      color:var(--text-color);
+  }
+  
+  /* General body styling */
+  html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    
+    
+    /* Background image with animation */
+    .background-container {
+      position: relative;
+      width: 100%;
+      height: 50vh; /* Adjust height as needed */
+      overflow: hidden; /* Prevent overflow issues */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Background image and overlay styling */
+    .background-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('/assets/Images/bg.jpg') no-repeat center center;
+      background-size: cover;
+      background-blend-mode: overlay;
+      animation: scaleBackground 10s alternate infinite; /* Adjust duration as needed */
+      z-index: 1; /* Place it below the content and overlay */
+    }
+    
+    /* Overlay styling */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); /* Adjust the overlay color and opacity */
+      z-index: 2; /* Place it above the background image */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Title styling */
+    .title-color {
+      color: #BA9945;
+      font-weight: 700;
+    }
+    
+    /* Main content area */
+    .main-content {
+      margin-top: 100px; /* Adjust based on navbar height */
+      padding: 20px; /* Padding for the content */
+    }
+    
+  
+    
+    /* Animation for scaling the background */
+    @keyframes scaleBackground {
+      0% {
+          transform: scale(1);
+      }
+      100% {
+          transform: scale(1.04); /* Slightly larger than the original size */
+      }
+    }
+    
+  h2 {
+    position: relative;
+   
+    margin: 0;
+    padding: 0 20px; /* Space between text and lines */
+    text-align: center;
+  }
+
+  h2::before,
+  h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 34%;
+    height: 1px;
+    background-color: var(--main-color); /* Line color matches the text color */
+  }
+
+  h2::before {
+    left: -150px;
+    width: 150px;
+    transform: translateY(-50%);
+  }
+
+  h2::after {
+    right: -150px;
+    width: 150px;
+    transform: translateY(-50%);
+  }
+/* RTL adjustments */
+[dir="rtl"] h2::before {
+  left: auto;
+  right: -140px; /* Adjust this value as needed */
+  width: 150px; /* Adjust line length */
+}
+
+[dir="rtl"] h2::after {
+  right: auto;
+  left: -140px; /* Adjust this value as needed */
+  width: 150px; /* Adjust line length */
+}
+      /* List styling */
+      .custom-list {
+        list-style: none; /* Remove default bullets */
+        padding-left: 0; /* Remove default padding */
+        overflow: hidden; /* Hide any overflowed content */
+       
+      }
+      
+      .custom-list li {
+        position: relative;
+        padding-left: 1.5rem; /* Adjust based on the bullet size */
+        margin-bottom: 0.5rem; /* Reduce bottom margin for better spacing */
+        opacity: 1; /* Ensure items are visible when shown */
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition for opacity and transform */
+        transform: translateY(0); /* Initial transform */
+      }
+      
+      .custom-list li::before {
+        content: '-'; /* Dash before each item */
+        position: absolute;
+        color: var(--text-color); /* Dash color */
+        font-size: 1rem; /* Dash size */
+        left: 0; /* Position on the left for LTR */
+      }
+      
+      /* RTL adjustments for the dash */
+      [dir="rtl"] .custom-list li {
+        padding-left: 0; /* Remove extra padding in RTL */
+        padding-right: 1.5rem; /* Add padding for dash in RTL */
+      }
+      
+      [dir="rtl"] .custom-list li::before {
+        left: auto; /* Override left positioning in RTL */
+        right: 0; /* Position dash on the right for RTL */
+      }
+      
+      [dir="rtl"] .custom-list {
+        direction: rtl; /* Ensure RTL support */
+      }
+     
+
+    /* Responsive design adjustments */
+    @media (max-width: 768px) {
+      .container{
+        width: 100%;
+      }
+      h2::before,
+      h2::after {
+        width: 0%; /* Adjust line width for smaller screens */
+      }
+      .english h1.title-color {
+          font-size: 1.5rem; /* Adjust for small screens */
+      }
+    
+      .english h2.title-color {
+          font-size: 0.8rem; /* Adjust for small screens */
+      }
+    
+      .arabic h1.title-color {
+          font-size: 3rem; /* Adjust for small screens */
+      }
+    
+      .arabic h2.title-color {
+          font-size: 1.5rem; /* Adjust for small screens */
+      }
+    
+      .overlay {
+          padding: 10px; /* Add padding to the overlay for better spacing */
+      }
+    
+      .background-container {
+          height: 50vh; /* Adjust height for smaller screens */
+      }
+      [dir="rtl"] h2::after,[dir="rtl"] h2::before{
+        width: 0%;
+      }
+    }

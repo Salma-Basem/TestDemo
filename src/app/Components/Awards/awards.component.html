@@ -1,0 +1,94 @@
+<!-- Awards .component.html -->
+<section class="header-section " id="first-section">
+    <div class="background-container d-flex align-items-center justify-content-center pb-3"[attr.dir]="language === 'ar' ? 'rtl' : 'ltr'" id="background">
+      <div class="overlay d-flex flex-column align-items-center justify-content-center {{ language === 'en' ? 'english' : 'arabic' }}">
+      
+       
+        <h3>brief</h3>
+        
+      </div>
+  </div>
+  </section> 
+<div class="container-fluid bg-main py-5 w-75" [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+
+    <div class="container py-3 mt-5 ">
+        <div id="Brief" class="container mx-auto border-bottom border-secondary ">
+            <!-- AWARDS BRIEF Section -->
+            <h2 class="text-center text-main fw-bold mb-3">{{ 'GHAYA_AWARDS.NAME' | translate }}</h2>
+            <!-- more content -->
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_AWARDS.DETAILS.POINT1' | translate }}</p>
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_AWARDS.DETAILS.POINT2' | translate }}</p>
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_AWARDS.DETAILS.POINT3' | translate }}</p>
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_AWARDS.DETAILS.POINT4' | translate }}</p>
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_AWARDS.DETAILS.POINT5' | translate }}</p>
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_AWARDS.DETAILS.POINT6' | translate }}</p>
+
+          </div>
+    </div>
+    
+    <div class="container py-3 mt-5">
+        <div id="ShortStory" class="container mx-auto border-bottom border-secondary">
+            <!-- Award 1 Section -->
+            <div class="row d-flex align-items-center flex-column flex-md-row">
+                <!-- Image Column -->
+                <div class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center mb-3 mb-md-0">
+                    <img src="./assets/Images/user.png" alt="" class="w-75">
+                    <span class="mt-2">{{ 'GHAYA_AWARDS.AWARD1.PHOTO_NAME' | translate }}</span>
+                </div>
+                <!-- Content Column -->
+                <div class="col-12 col-md-9">
+                    <div class="mb-5">
+                        <h2 class="text-center text-main fw-bold mb-3">{{ 'GHAYA_AWARDS.AWARD1.NAME' | translate }}</h2>
+                        <!-- More Content -->
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.DETAILS.POINT1' | translate | newlineToBr"></p>
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT2' | translate | newlineToBr"></p>
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT3' | translate | newlineToBr"></p>
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT4' | translate | newlineToBr"></p>
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT5' | translate | newlineToBr"></p>
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT6' | translate | newlineToBr"></p>
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT7' | translate | newlineToBr"></p>
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD1.DETAILS.POINT8' | translate | newlineToBr"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container py-3 mt-5">
+        <div id="Photography" class="container mx-auto border-bottom border-secondary">
+            <!-- Award 2 Section -->
+            <div class="row d-flex align-items-center flex-column flex-md-row">
+                <!-- Image Column -->
+                <div class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center mb-3 mb-md-0">
+                    <img src="./assets/Images/camera.png" alt="Camera" class="w-75">
+                </div>
+                <!-- Content Column -->
+                <div class="col-12 col-md-9">
+                    <div class="mb-5">
+                        <h2 class="text-center text-main fw-bold mb-3">{{ 'GHAYA_AWARDS.AWARD2.NAME' | translate }}</h2>
+                        <!-- More Content -->
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD2.DETAILS.POINT1' | translate | newlineToBr"></p>
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD2.DETAILS.POINT2' | translate | newlineToBr"></p>
+                        <p class="lead" [innerHTML]="'GHAYA_AWARDS.AWARD2.DETAILS.POINT3' | translate | newlineToBr"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container py-3 mt-5 ">
+    <div id="ContentCreation" class="container mx-auto  ">
+        <!-- AWARDS BRIEF Section -->
+        <h2 class="text-center text-main fw-bold mb-3">{{ 'GHAYA_AWARDS.AWARD3.NAME' | translate }}</h2>
+        <!-- more content -->
+        <p class=" text-main lead  mb-3">{{ 'GHAYA_AWARDS.AWARD3.DETAILS.POINT1' | translate }}</p>
+        <p class=" text-main lead  mb-3">{{ 'GHAYA_AWARDS.AWARD3.DETAILS.POINT2' | translate }}</p>
+        <p class=" text-main lead  mb-3">{{ 'GHAYA_AWARDS.AWARD3.DETAILS.POINT3' | translate }}</p>
+        <p class=" text-main lead  mb-3">{{ 'GHAYA_AWARDS.AWARD3.DETAILS.POINT4' | translate }}</p>
+        <p class=" text-main lead  mb-3">{{ 'GHAYA_AWARDS.AWARD3.DETAILS.POINT5' | translate }}</p>
+
+      </div>
+    </div>
+
+ </div>
+  

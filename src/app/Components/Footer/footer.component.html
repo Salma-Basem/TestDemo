@@ -1,0 +1,79 @@
+<!-- Footer -->
+<div class="container-fluid bg border-top " [dir]="language === 'ar' ? 'rtl' : 'ltr'">
+  <div class="container mt-3  ">
+    <div class="row  ">
+      <!-- Helpful Links Section -->
+      <div class="col-md-6 d-flex flex-column justify-content-start align-items-center">
+       <h3><a routerLink="ContactUs" class="text-decoration-none footer">{{ language === 'ar' ? 'اتصل بنا' : 'Contact Us' }}</a></h3>
+       <a  routerLinkActive="router-link-active" class="cursor-pointer " (click)="goToMediaContact()">
+
+       <div class="d-flex align-items-baseline mb-2" >
+        <i class="fa-solid fa-envelope text-main me-2"></i>
+        <span  class="text-main fw-bolder mb-0 ms-1 me-1 cursor-pointer h5" [innerHTML]="'MEDIA_CONTACT' | translate | newlineToBr"></span>
+      </div>
+    </a>
+      <a  routerLinkActive="router-link-active" class="cursor-pointer h6" (click)="goToMediaContact()">media&#64;ghayaeg.com</a>
+
+      <a  routerLinkActive="router-link-active" class="cursor-pointer " (click)="goToGeneralMail()">
+
+      <div class="d-flex align-items-baseline mb-2">
+        <i class="fa-solid fa-envelope text-main me-2"></i>
+        <span  class="text-main fw-bolder  mb-0 ms-1 me-1 h5" [innerHTML]="'GENERAL_MAIL' | translate | newlineToBr"></span>
+      </div>
+    </a>
+      <a routerLinkActive="router-link-active" class="cursor-pointer h6" (click)="goToGeneralMail()">info&#64;ghayaeg.com</a>
+
+      <h6><a routerLink="ContactUs" class="text-decoration-underline cursor-pointer footer">{{ language === 'ar' ? 'اتصل بنا' : 'Contact Us' }}</a></h6>
+
+     
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="col-md-6 d-flex flex-column justify-content-start align-items-center  social-links">
+        <h3 class="text-color fw-bold h5 social-text">
+            {{ language === 'ar' ? 'مواقع التواصل الاجتماعي' : 'Socials' }}
+        </h3>
+        <div class="flex-sm-row d-flex mt-sm-2 flex-md-column " >
+            <div class="cursor-pointer" (click)="goToFacebook()">
+                <i class="fab fa-facebook fa-fw mb-2 facebook"></i><span class="social-text">{{ language === 'ar' ? ' فيسبوك' : 'Facebook' }} </span>
+            </div>
+            <div class="cursor-pointer" (click)="goToInstagram()">
+                <i class="fa-brands fa-instagram fa-fw mb-2 instagram"></i><span class="social-text">{{ language === 'ar' ? 'انستجرام': 'Instagram' }} </span>
+            </div>
+          
+            <div class="cursor-pointer" (click)="goToYoutube()">
+                <i class="fa-brands fa-youtube fa-fw mb-2 text-danger"></i><span class="social-text">{{ language === 'ar' ? ' يوتيوب': 'Youtube' }} </span>
+            </div>
+            <div class="cursor-pointer" (click)="goToTikTok()">
+                <i class="fa-brands fa-tiktok fa-fw mb-2 "></i><span class="social-text">{{ language === 'ar' ? ' تيك توك': 'TikTok' }} </span>
+            </div>
+            <div class="cursor-pointer" (click)="goToTikTok()">
+              <i class="fa-brands fa-x-twitter fa-fw mb-2"></i><span class="social-text">{{ language === 'ar' ? 'إكس': 'X' }} </span>
+          </div>
+            <div class="cursor-pointer" (click)="goToLinkedin()">
+                <i class="fa-brands fa-linkedin-in fa-fw mb-2 linkedin"></i><span class="social-text">{{ language === 'ar' ? ' لينكدإن': 'Linkedin' }} </span>
+            </div>
+        </div>
+      
+    </div>
+    
+    
+
+   
+      
+      
+    </div>
+  </div>
+  
+<div class="container-fluid bg pb-2">
+  <h6 class="text-center text-main  mt-2 mb-1">{{ language === 'ar' ? '© جميع الحقوق محفوظة لمؤسسة غايا للإبداع ٢٠٢٤' : '© All rights reserved for Ghaya Publishing House 2024' }}</h6>
+  <button *ngIf="showScrollToTopButton" (click)="scrollToTop()" class="scroll-to-top-btn border rounded-1">
+    <i class="fa-solid fa-arrow-up "></i>
+  </button>
+</div>
+</div>
+
+
+
+
+
